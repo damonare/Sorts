@@ -4,7 +4,8 @@ function heapSort(array) {
     console.time('堆排序耗时');
     if (Object.prototype.toString.call(array).slice(8, -1) === 'Array') {
         //建堆
-        var heapSize = array.length, temp;
+        var heapSize = array.length,
+            temp;
         for (var i = Math.floor(heapSize / 2) - 1; i >= 0; i--) {
             heapify(array, i, heapSize);
         }
@@ -28,7 +29,10 @@ function heapSort(array) {
 @param  len 堆大小*/
 function heapify(arr, x, len) {
     if (Object.prototype.toString.call(arr).slice(8, -1) === 'Array' && typeof x === 'number') {
-        var l = 2 * x + 1, r = 2 * x + 2, largest = x, temp;
+        var l = 2 * x + 1,
+            r = 2 * x + 2,
+            largest = x,
+            temp;
         if (l < len && arr[l] > arr[largest]) {
             largest = l;
         }
@@ -45,5 +49,5 @@ function heapify(arr, x, len) {
         return 'arr is not an Array or x is not a number!';
     }
 }
-var arr=[91,60,96,13,35,65,46,65,10,30,20,31,77,81,22];
-console.log(heapSort(arr));//[10, 13, 20, 22, 30, 31, 35, 46, 60, 65, 65, 77, 81, 91, 96]
+var arr = [91, 60, 96, 13, 35, 65, 46, 65, 10, 30, 20, 31, 77, 81, 22];
+console.log(heapSort(arr)); //[10, 13, 20, 22, 30, 31, 35, 46, 60, 65, 65, 77, 81, 91, 96]
