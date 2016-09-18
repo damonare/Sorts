@@ -73,7 +73,7 @@ Out-place: 占用额外内存
 
 **JavaScript代码实现：**
 
-```
+```javascript
 function bubbleSort(arr) {
     var len = arr.length;
     for (var i = 0; i < len; i++) {
@@ -93,7 +93,7 @@ console.log(bubbleSort(arr));//[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 
 >**改进冒泡排序： **设置一标志性变量pos,用于记录每趟排序中最后一次进行交换的位置。由于pos位置之后的记录均已交换到位,故在进行下一趟排序时只要扫描到pos位置即可。
 
 改进后算法如下:
-```
+```javascript
 
 function bubbleSort2(arr) {
     console.time('改进后冒泡排序耗时');
@@ -116,7 +116,7 @@ console.log(bubbleSort2(arr));//[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47,
 > 传统冒泡排序中每一趟排序操作只能找到一个最大值或最小值,我们考虑利用在每趟排序中进行正向和反向两遍冒泡的方法一次可以得到两个最终值(最大者和最小者) , 从而使排序趟数几乎减少了一半。
 
 改进后的算法实现为:
-```
+```javascript
 function bubbleSort3(arr3) {
     var low = 0;
     var high= arr.length-1; //设置变量的初始值
@@ -180,7 +180,7 @@ n个记录的直接选择排序可经过n-1趟直接选择排序得到有序结�
 
 **Javascript代码实现:**
 
-```
+```javascript
 function selectionSort(arr) {
     var len = arr.length;
     var minIndex, temp;
@@ -236,7 +236,7 @@ console.log(selectionSort(arr));//[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 4
 
 **Javascript代码实现:**
 
-```
+```javascript
 function insertionSort(array) {
     if (Object.prototype.toString.call(array).slice(8, -1) === 'Array') {
         console.time('插入排序耗时：');
@@ -259,7 +259,7 @@ function insertionSort(array) {
 ```
 > **改进插入排序：** 查找插入位置时使用二分查找的方式
 
-```
+```javascript
 function binaryInsertionSort(array) {
     if (Object.prototype.toString.call(array).slice(8, -1) === 'Array') {
         console.time('二分插入排序耗时：');
@@ -322,7 +322,7 @@ console.log(binaryInsertionSort(arr));//[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44,
 
 **Javascript代码实现：**
 
-```
+```javascript
 function shellSort(arr) {
     var len = arr.length,
         temp,
@@ -376,7 +376,7 @@ console.log(shellSort(arr));//[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 4
 
 **Javscript代码实现:**
 
-```
+```javascript
 function mergeSort(arr) {  //采用自上而下的递归方法
     var len = arr.length;
     if(len < 2) {
@@ -441,7 +441,7 @@ console.log(mergeSort(arr));
 
 **Javascript代码实现：**
 
-```
+```javascript
 /*方法说明：快速排序
 @param  array 待排序数组*/
 //方法一
@@ -522,7 +522,7 @@ console.log(quickSort2(arr));//[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 
 
 **Javascript代码实现：**
 
-```
+```javascript
 /*方法说明：堆排序
 @param  array 待排序数组*/
 function heapSort(array) {
@@ -605,7 +605,7 @@ console.log(heapSort(arr));//[10, 13, 20, 22, 30, 31, 35, 46, 60, 65, 65, 77, 81
 
 **Javascript代码实现：**
 
-```
+```javascript
 function countingSort(array) {
     var len = array.length,
         B = [],
@@ -663,7 +663,7 @@ console.log(countingSort(arr)); //[1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 4, 4, 6, 
 
 **Javascript代码实现:**
 
-```
+```javascript
 /*方法说明：桶排序
 @param  array 数组
 @param  num   桶的数量*/
@@ -737,7 +737,7 @@ console.log(bucketSort(arr,4));//[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47
 
 **Javascript代码实现：**
 
-```
+```javascript
 /**
  * 基数排序适用于：
  *  (1)数据范围较小，建议在小于1000
