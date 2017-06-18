@@ -1,5 +1,8 @@
-/*方法说明：堆排序
-@param  array 待排序数组*/
+/**
+ * 方法说明：堆排序
+ * @param {Array} array 待排序数组
+ * @return {Array}
+ */
 function heapSort(array) {
     console.time('堆排序耗时');
     if (Object.prototype.toString.call(array).slice(8, -1) === 'Array') {

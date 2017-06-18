@@ -1,5 +1,8 @@
-/*方法说明：希尔排序
-@param  arr 待排序数组*/
+/**
+ * 方法说明：希尔排序
+ * @param {Array} arr 待排序数组
+ * @return {Array}
+ */
 function shellSort(arr) {
     var len = arr.length,
         temp,

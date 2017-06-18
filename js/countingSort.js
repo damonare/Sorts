@@ -1,5 +1,8 @@
-/*方法说明：计数排序
-@param  array 待排序数组*/
+/**
+ * 方法说明：计数排序
+ * @param {Array} array 待排序数组
+ * @return {Array}
+ */
 function countingSort(array) {
     var len = array.length,
         B = [],

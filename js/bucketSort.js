@@ -1,6 +1,9 @@
-/*方法说明：桶排序
-@param  array 数组
-@param  num   桶的数量*/
+/**
+ * 方法说明：桶排序
+ * @param {Array} array 数组
+ * @param {number} num   桶的数量
+ * @return {Array}
+ */
 function bucketSort(array, num) {
     if (array.length <= 1) {
         return array;

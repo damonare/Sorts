@@ -1,8 +1,9 @@
-/*方法说明：基数排序
+/**
+ * 方法说明：基数排序
  * @param  arr 待排序数组
  * @param  maxDigit 最大位数
+ * @return {Array}
  */
-
 //LSD Radix Sort
 function radixSort(arr, maxDigit) {
     var mod = 10;

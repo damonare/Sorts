@@ -1,5 +1,8 @@
-/*方法说明：快速排序
-@param  array 待排序数组*/
+/**
+ * 方法说明：快速排序
+ * @param {Array} array 待排序数组
+ * @return {Array}
+ */
 //方法一
 function quickSort(array, left, right) {
     console.time('1.快速排序耗时');

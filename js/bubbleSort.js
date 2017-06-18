@@ -1,5 +1,8 @@
-/*方法说明：冒泡排序
-@param  arr 待排序数组*/
+/**
+ * 方法说明：冒泡排序
+ * @param {Array} arr
+ * @return {Array}
+ */
 function bubbleSort(arr) {
     var len = arr.length;
     console.time('改进前冒泡排序耗时');

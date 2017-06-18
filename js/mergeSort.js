@@ -1,5 +1,8 @@
-/*方法说明：归并排序
-@param  arr 待排序数组*/
+/**
+ * 方法说明：归并排序
+ * @param {Array} arr 待排序数组
+ * @return {Array}
+ */
 function mergeSort(arr) { //采用自上而下的递归方法
     var len = arr.length;
     if (len < 2) {

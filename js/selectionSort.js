@@ -1,5 +1,8 @@
-/*方法说明：选择排序
-@param  arr 待排序数组*/
+/**
+ * 方法说明：选择排序
+ * @param {Array} arr 待排序数组
+ * @return {Array}
+ */
 function selectionSort(arr) {
     var len = arr.length;
     var minIndex, temp;
