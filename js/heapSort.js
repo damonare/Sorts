@@ -7,17 +7,19 @@ function heapSort(array) {
     console.time('堆排序耗时');
     if (Object.prototype.toString.call(array).slice(8, -1) === 'Array') {
         //建堆
-        var heapSize = array.length,
-            temp;
+        var heapSize = array.length;
+        // temp;
+
         for (var i = Math.floor(heapSize / 2) - 1; i >= 0; i--) {
             heapify(array, i, heapSize);
         }
 
         //堆排序
         for (var j = heapSize - 1; j >= 1; j--) {
-            temp = array[0];
-            array[0] = array[j];
-            array[j] = temp;
+            // temp = array[0];
+            // array[0] = array[j];
+            // array[j] = temp;
+            [array[0], array[j]] = [array[j], array[0]]; // ES6 解构交换变量
             heapify(array, 0, --heapSize);
         }
         console.timeEnd('堆排序耗时');
@@ -34,8 +36,8 @@ function heapify(arr, x, len) {
     if (Object.prototype.toString.call(arr).slice(8, -1) === 'Array' && typeof x === 'number') {
         var l = 2 * x + 1,
             r = 2 * x + 2,
-            largest = x,
-            temp;
+            largest = x;
+        // temp;
         if (l < len && arr[l] > arr[largest]) {
             largest = l;
         }
@@ -43,9 +45,10 @@ function heapify(arr, x, len) {
             largest = r;
         }
         if (largest != x) {
-            temp = arr[x];
-            arr[x] = arr[largest];
-            arr[largest] = temp;
+            // temp = arr[x];
+            // arr[x] = arr[largest];
+            // arr[largest] = temp;
+            [arr[x], arr[largest]] = [arr[largest], arr[x]];  // ES6 解构交换变量
             heapify(arr, largest, len);
         }
     } else {

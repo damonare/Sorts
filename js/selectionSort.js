@@ -5,7 +5,8 @@
  */
 function selectionSort(arr) {
     var len = arr.length;
-    var minIndex, temp;
+    var minIndex;
+    // var temp;
     console.time('选择排序耗时');
     for (var i = 0; i < len - 1; i++) {
         minIndex = i;
@@ -14,9 +15,10 @@ function selectionSort(arr) {
                 minIndex = j; //将最小数的索引保存
             }
         }
-        temp = arr[i];
-        arr[i] = arr[minIndex];
-        arr[minIndex] = temp;
+        // temp = arr[i];
+        // arr[i] = arr[minIndex];
+        // arr[minIndex] = temp;
+        [arr[i], arr[minIndex]] = [arr[minIndex, arr[i]]]; // ES6 解构交换变量
     }
     console.timeEnd('选择排序耗时');
     return arr;

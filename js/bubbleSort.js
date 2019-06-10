@@ -12,7 +12,7 @@ function bubbleSort(arr) {
                 // var temp = arr[j + 1]; //元素交换
                 // arr[j + 1] = arr[j];
                 // arr[j] = temp;
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // es6 的解构来进行元素交换
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // ES6 的解构来进行元素交换
             }
         }
     }
@@ -31,7 +31,7 @@ function bubbleSort2(arr2) {
                 // var tmp = arr[j];
                 // arr[j] = arr[j + 1];
                 // arr[j + 1] = tmp;
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // es6 的解构来进行元素交换
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // ES6 的解构来进行元素交换
             }
         i = pos; //为下一趟排序作准备
     }
@@ -50,7 +50,7 @@ function bubbleSort3(arr3) {
                 // tmp = arr[j];
                 // arr[j] = arr[j + 1];
                 // arr[j + 1] = tmp;
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // es6 的解构来进行元素交换
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // ES6 的解构来进行元素交换
             }
         --high; //修改high值, 前移一位
         for (j = high; j > low; --j) //反向冒泡,找到最小者
@@ -58,7 +58,7 @@ function bubbleSort3(arr3) {
                 // tmp = arr[j];
                 // arr[j] = arr[j - 1];
                 // arr[j - 1] = tmp;
-                [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]]; // es6 的解构来进行元素交换
+                [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]]; // ES6 的解构来进行元素交换
             }
         ++low; //修改low值,后移一位
     }
