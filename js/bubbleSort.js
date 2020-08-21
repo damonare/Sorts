@@ -9,9 +9,10 @@ function bubbleSort(arr) {
     for (var i = 0; i < len; i++) {
         for (var j = 0; j < len - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) { //相邻元素两两对比
-                var temp = arr[j + 1]; //元素交换
-                arr[j + 1] = arr[j];
-                arr[j] = temp;
+                // var temp = arr[j + 1]; //元素交换
+                // arr[j + 1] = arr[j];
+                // arr[j] = temp;
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // ES6 的解构来进行元素交换
             }
         }
     }
@@ -27,9 +28,10 @@ function bubbleSort2(arr) {
         for (var j = 0; j < i; j++)
             if (arr[j] > arr[j + 1]) {
                 pos = j; //记录交换的位置
-                var tmp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = tmp;
+                // var tmp = arr[j];
+                // arr[j] = arr[j + 1];
+                // arr[j + 1] = tmp;
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // ES6 的解构来进行元素交换
             }
         i = pos; //为下一趟排序作准备
     }
@@ -45,23 +47,25 @@ function bubbleSort3(arr) {
     while (low < high) {
         for (j = low; j < high; ++j) //正向冒泡,找到最大者
             if (arr[j] > arr[j + 1]) {
-                tmp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = tmp;
+                // tmp = arr[j];
+                // arr[j] = arr[j + 1];
+                // arr[j + 1] = tmp;
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; // ES6 的解构来进行元素交换
             }
-            --high; //修改high值, 前移一位
+        --high; //修改high值, 前移一位
         for (j = high; j > low; --j) //反向冒泡,找到最小者
             if (arr[j] < arr[j - 1]) {
-                tmp = arr[j];
-                arr[j] = arr[j - 1];
-                arr[j - 1] = tmp;
+                // tmp = arr[j];
+                // arr[j] = arr[j - 1];
+                // arr[j - 1] = tmp;
+                [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]]; // ES6 的解构来进行元素交换
             }
-            ++low; //修改low值,后移一位
+        ++low; //修改low值,后移一位
     }
     console.timeEnd('2.改进后冒泡排序耗时');
     return arr;
 }
 var arr = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48];
-console.log(selectionSort(arr)); //[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 48, 50]
-//console.log(bubbleSort2(arr)); //[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 48, 50]
-//console.log(bubbleSort3(arr)); //[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 48, 50]
+console.log(bubbleSort(arr)); //[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 48, 50]
+console.log(bubbleSort2(arr)); //[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 48, 50]
+console.log(bubbleSort3(arr)); //[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 48, 50]
