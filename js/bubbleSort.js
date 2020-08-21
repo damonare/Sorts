@@ -20,7 +20,7 @@ function bubbleSort(arr) {
     return arr;
 }
 //1.改进冒泡排序
-function bubbleSort2(arr2) {
+function bubbleSort2(arr) {
     console.time('1.改进后冒泡排序耗时');
     var i = arr.length - 1; //初始时,最后位置保持不变
     while (i > 0) {
@@ -36,10 +36,10 @@ function bubbleSort2(arr2) {
         i = pos; //为下一趟排序作准备
     }
     console.timeEnd('1.改进后冒泡排序耗时');
-    return arr2;
+    return arr;
 }
 //2.改进冒泡排序
-function bubbleSort3(arr3) {
+function bubbleSort3(arr) {
     var low = 0;
     var high = arr.length - 1; //设置变量的初始值
     var tmp, j;
@@ -63,7 +63,7 @@ function bubbleSort3(arr3) {
         ++low; //修改low值,后移一位
     }
     console.timeEnd('2.改进后冒泡排序耗时');
-    return arr3;
+    return arr;
 }
 var arr = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48];
 console.log(bubbleSort(arr)); //[2, 3, 4, 5, 15, 19, 26, 27, 36, 38, 44, 46, 47, 48, 50]
